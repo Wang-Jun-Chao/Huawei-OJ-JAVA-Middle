@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/001-4415-重复的电话号码（Java）/001-4415-重复的电话号码（Java）.iml" filepath="$PROJECT_DIR$/001-4415-重复的电话号码（Java）/001-4415-重复的电话号码（Java）.iml" />
       <module fileurl="file://$PROJECT_DIR$/002-4420-求二叉树的深度和宽度/002-4420-求二叉树的深度和宽度.iml" filepath="$PROJECT_DIR$/002-4420-求二叉树的深度和宽度/002-4420-求二叉树的深度和宽度.iml" />
+      <module fileurl="file://$PROJECT_DIR$/003-4329-判断自守数/003-4329-判断自守数.iml" filepath="$PROJECT_DIR$/003-4329-判断自守数/003-4329-判断自守数.iml" />
+      <module fileurl="file://$PROJECT_DIR$/004-4328-约瑟夫问题/004-4328-约瑟夫问题.iml" filepath="$PROJECT_DIR$/004-4328-约瑟夫问题/004-4328-约瑟夫问题.iml" />
     </modules>
   </component>
 </project>

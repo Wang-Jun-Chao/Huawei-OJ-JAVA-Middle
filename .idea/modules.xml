@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/002-4420-求二叉树的深度和宽度/002-4420-求二叉树的深度和宽度.iml" filepath="$PROJECT_DIR$/002-4420-求二叉树的深度和宽度/002-4420-求二叉树的深度和宽度.iml" />
       <module fileurl="file://$PROJECT_DIR$/003-4329-判断自守数/003-4329-判断自守数.iml" filepath="$PROJECT_DIR$/003-4329-判断自守数/003-4329-判断自守数.iml" />
       <module fileurl="file://$PROJECT_DIR$/004-4328-约瑟夫问题/004-4328-约瑟夫问题.iml" filepath="$PROJECT_DIR$/004-4328-约瑟夫问题/004-4328-约瑟夫问题.iml" />
+      <module fileurl="file://$PROJECT_DIR$/005-4325-N阶楼梯的走法/005-4325-N阶楼梯的走法.iml" filepath="$PROJECT_DIR$/005-4325-N阶楼梯的走法/005-4325-N阶楼梯的走法.iml" />
     </modules>
   </component>
 </project>

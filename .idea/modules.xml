@@ -24,6 +24,10 @@
       <module fileurl="file://$PROJECT_DIR$/019-4323-乒乓球/019-4323-乒乓球.iml" filepath="$PROJECT_DIR$/019-4323-乒乓球/019-4323-乒乓球.iml" />
       <module fileurl="file://$PROJECT_DIR$/020-4303-判断字符串类型/020-4303-判断字符串类型.iml" filepath="$PROJECT_DIR$/020-4303-判断字符串类型/020-4303-判断字符串类型.iml" />
       <module fileurl="file://$PROJECT_DIR$/021-4301-字符串分隔/021-4301-字符串分隔.iml" filepath="$PROJECT_DIR$/021-4301-字符串分隔/021-4301-字符串分隔.iml" />
+      <module fileurl="file://$PROJECT_DIR$/022-4291-简单错误记录/022-4291-简单错误记录.iml" filepath="$PROJECT_DIR$/022-4291-简单错误记录/022-4291-简单错误记录.iml" />
+      <module fileurl="file://$PROJECT_DIR$/023-4292-坐标移动/023-4292-坐标移动.iml" filepath="$PROJECT_DIR$/023-4292-坐标移动/023-4292-坐标移动.iml" />
+      <module fileurl="file://$PROJECT_DIR$/024-4290-识别有效的IP地址和掩码并进行分类统计/024-4290-识别有效的IP地址和掩码并进行分类统计.iml" filepath="$PROJECT_DIR$/024-4290-识别有效的IP地址和掩码并进行分类统计/024-4290-识别有效的IP地址和掩码并进行分类统计.iml" />
+      <module fileurl="file://$PROJECT_DIR$/025-4287-整数排序/025-4287-整数排序.iml" filepath="$PROJECT_DIR$/025-4287-整数排序/025-4287-整数排序.iml" />
     </modules>
   </component>
 </project>

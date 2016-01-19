@@ -18,6 +18,8 @@
       <module fileurl="file://$PROJECT_DIR$/014-4299-简单密码破解/014-4299-简单密码破解.iml" filepath="$PROJECT_DIR$/014-4299-简单密码破解/014-4299-简单密码破解.iml" />
       <module fileurl="file://$PROJECT_DIR$/015-4270-二叉树遍历/015-4270-二叉树遍历.iml" filepath="$PROJECT_DIR$/015-4270-二叉树遍历/015-4270-二叉树遍历.iml" />
       <module fileurl="file://$PROJECT_DIR$/015-4271-重建二叉树/015-4271-重建二叉树.iml" filepath="$PROJECT_DIR$/015-4271-重建二叉树/015-4271-重建二叉树.iml" />
+      <module fileurl="file://$PROJECT_DIR$/016-4322-将数组中的字符串按指定长度重新分割/016-4322-将数组中的字符串按指定长度重新分割.iml" filepath="$PROJECT_DIR$/016-4322-将数组中的字符串按指定长度重新分割/016-4322-将数组中的字符串按指定长度重新分割.iml" />
+      <module fileurl="file://$PROJECT_DIR$/017-4327-将十六进制字符串形式内容转为内存值形式/017-4327-将十六进制字符串形式内容转为内存值形式.iml" filepath="$PROJECT_DIR$/017-4327-将十六进制字符串形式内容转为内存值形式/017-4327-将十六进制字符串形式内容转为内存值形式.iml" />
     </modules>
   </component>
 </project>

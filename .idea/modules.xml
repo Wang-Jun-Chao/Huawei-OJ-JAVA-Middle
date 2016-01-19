@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/011-4289-二叉搜索树/011-4289-二叉搜索树.iml" filepath="$PROJECT_DIR$/011-4289-二叉搜索树/011-4289-二叉搜索树.iml" />
       <module fileurl="file://$PROJECT_DIR$/012-4296-大数求和/012-4296-大数求和.iml" filepath="$PROJECT_DIR$/012-4296-大数求和/012-4296-大数求和.iml" />
       <module fileurl="file://$PROJECT_DIR$/013-4286-密码验证合格程序/013-4286-密码验证合格程序.iml" filepath="$PROJECT_DIR$/013-4286-密码验证合格程序/013-4286-密码验证合格程序.iml" />
+      <module fileurl="file://$PROJECT_DIR$/014-4299-简单密码破解/014-4299-简单密码破解.iml" filepath="$PROJECT_DIR$/014-4299-简单密码破解/014-4299-简单密码破解.iml" />
     </modules>
   </component>
 </project>

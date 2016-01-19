@@ -21,6 +21,9 @@
       <module fileurl="file://$PROJECT_DIR$/016-4322-将数组中的字符串按指定长度重新分割/016-4322-将数组中的字符串按指定长度重新分割.iml" filepath="$PROJECT_DIR$/016-4322-将数组中的字符串按指定长度重新分割/016-4322-将数组中的字符串按指定长度重新分割.iml" />
       <module fileurl="file://$PROJECT_DIR$/017-4327-将十六进制字符串形式内容转为内存值形式/017-4327-将十六进制字符串形式内容转为内存值形式.iml" filepath="$PROJECT_DIR$/017-4327-将十六进制字符串形式内容转为内存值形式/017-4327-将十六进制字符串形式内容转为内存值形式.iml" />
       <module fileurl="file://$PROJECT_DIR$/018-4326-用小数形式输出指定符号出现的频率/018-4326-用小数形式输出指定符号出现的频率.iml" filepath="$PROJECT_DIR$/018-4326-用小数形式输出指定符号出现的频率/018-4326-用小数形式输出指定符号出现的频率.iml" />
+      <module fileurl="file://$PROJECT_DIR$/019-4323-乒乓球/019-4323-乒乓球.iml" filepath="$PROJECT_DIR$/019-4323-乒乓球/019-4323-乒乓球.iml" />
+      <module fileurl="file://$PROJECT_DIR$/020-4303-判断字符串类型/020-4303-判断字符串类型.iml" filepath="$PROJECT_DIR$/020-4303-判断字符串类型/020-4303-判断字符串类型.iml" />
+      <module fileurl="file://$PROJECT_DIR$/021-4301-字符串分隔/021-4301-字符串分隔.iml" filepath="$PROJECT_DIR$/021-4301-字符串分隔/021-4301-字符串分隔.iml" />
     </modules>
   </component>
 </project>

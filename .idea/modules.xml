@@ -20,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/015-4271-重建二叉树/015-4271-重建二叉树.iml" filepath="$PROJECT_DIR$/015-4271-重建二叉树/015-4271-重建二叉树.iml" />
       <module fileurl="file://$PROJECT_DIR$/016-4322-将数组中的字符串按指定长度重新分割/016-4322-将数组中的字符串按指定长度重新分割.iml" filepath="$PROJECT_DIR$/016-4322-将数组中的字符串按指定长度重新分割/016-4322-将数组中的字符串按指定长度重新分割.iml" />
       <module fileurl="file://$PROJECT_DIR$/017-4327-将十六进制字符串形式内容转为内存值形式/017-4327-将十六进制字符串形式内容转为内存值形式.iml" filepath="$PROJECT_DIR$/017-4327-将十六进制字符串形式内容转为内存值形式/017-4327-将十六进制字符串形式内容转为内存值形式.iml" />
+      <module fileurl="file://$PROJECT_DIR$/018-4326-用小数形式输出指定符号出现的频率/018-4326-用小数形式输出指定符号出现的频率.iml" filepath="$PROJECT_DIR$/018-4326-用小数形式输出指定符号出现的频率/018-4326-用小数形式输出指定符号出现的频率.iml" />
     </modules>
   </component>
 </project>

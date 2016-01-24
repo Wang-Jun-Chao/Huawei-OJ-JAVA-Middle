@@ -29,6 +29,7 @@
       <module fileurl="file://$PROJECT_DIR$/023-4292-坐标移动/023-4292-坐标移动.iml" filepath="$PROJECT_DIR$/023-4292-坐标移动/023-4292-坐标移动.iml" />
       <module fileurl="file://$PROJECT_DIR$/024-4290-识别有效的IP地址和掩码并进行分类统计/024-4290-识别有效的IP地址和掩码并进行分类统计.iml" filepath="$PROJECT_DIR$/024-4290-识别有效的IP地址和掩码并进行分类统计/024-4290-识别有效的IP地址和掩码并进行分类统计.iml" />
       <module fileurl="file://$PROJECT_DIR$/025-4287-整数排序/025-4287-整数排序.iml" filepath="$PROJECT_DIR$/025-4287-整数排序/025-4287-整数排序.iml" />
+      <module fileurl="file://$PROJECT_DIR$/026-4740-24点算法/026-4740-24点算法.iml" filepath="$PROJECT_DIR$/026-4740-24点算法/026-4740-24点算法.iml" />
     </modules>
   </component>
 </project>

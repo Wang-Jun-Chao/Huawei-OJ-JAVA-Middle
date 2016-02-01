@@ -25,4 +25,22 @@ public class DemoTest {
         Assert.assertEquals(endata.enElem, dedata.deElem);
         Assert.assertEquals(empty, 1);
     }
+
+    @Test
+    public void testCase02() {
+        Demo.initQueue();
+        for (int i = 0; i < 12; i++) {
+            EnQueueInf endata = new EnQueueInf();
+            endata.enElem = i;
+            System.out.println(Demo.enQueue(endata));
+            Demo.printQueue();
+        }
+
+        for (int i = 0; i < 12; i++) {
+            DeQueueInf dedata = new DeQueueInf();
+            int rst = Demo.deQueue(dedata);
+            System.out.println(rst + " " + dedata.deElem);
+            Demo.printQueue();
+        }
+    }
 }

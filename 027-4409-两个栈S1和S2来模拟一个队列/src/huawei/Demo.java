@@ -1,5 +1,8 @@
 package huawei;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public final class Demo {
 
     public static class EnQueueInf {
@@ -10,7 +13,7 @@ public final class Demo {
         public int deElem;
     }
     /*
-	请利用两个栈S1和S2来模拟一个队列。
+    请利用两个栈S1和S2来模拟一个队列。
 
 	已知栈的四个运算定义如下：
 	Init(ST): 初始化ST栈，初始化完成后的栈为空，没有任何元素；
@@ -41,51 +44,75 @@ public final class Demo {
 	2、然后参考算法说明，通过对两个栈的操作来模拟一个队列。
 	*/
 
+    private static List<Object> IN;
+    private static List<Object> OUT;
+
+
     //初始化ST栈，初始化完成后的栈为空，没有任何元素；
     public static int initSt(Object st) {
-	    /*在此添加代码*/
+        IN = new LinkedList<Object>();
+        OUT = new LinkedList<Object>();
         return 0;
     }
 
     //元素x入ST栈；
-    public static int push(Object st, int x) {
+    public static int push(Object st, EnQueueInf x) {
 	    /*在此添加代码*/
+        if (IN.size() + OUT.size() >= 10) {
+            return 1;
+        }
+
+        IN.add(x.enElem);
         return 0;
     }
 
     //ST栈顶元素出栈，赋给变量x；
-    public static int pop(Object st, int x) {
-	    /*在此添加代码*/
+    public static int pop(Object st, DeQueueInf x) {
+
+        if (IN.isEmpty() && OUT.isEmpty()) {
+            return 1;
+        }
+
+        if (OUT.isEmpty()) {
+            while (!IN.isEmpty()) {
+                OUT.add(IN.remove(IN.size() - 1));
+            }
+        }
+
+        x.deElem = (Integer) OUT.remove(OUT.size() - 1);
         return 0;
     }
 
     //判ST栈是否为空。
     public static int isEmpty(Object st) {
-	    /*在此添加代码*/
+        if (IN.isEmpty() && OUT.isEmpty()) {
+            return 1;
+        }
         return 0;
     }
 
     //初始化队列，初始化完成后的队列为空，没有任何元素；
     public static int initQueue() {
-	    /*在此添加代码*/
-        return 0;
+        return initSt(null);
     }
 
     //将元素Elem插入队列，若入队列成功返回0，否则返回1。
     public static int enQueue(EnQueueInf elem) {
-	    /*在此添加代码*/
-        return 0;
+        return push(null, elem);
     }
 
     //从队列中取出一个元素放入pElem，若出队列成功返回0，否则返回1。
     public static int deQueue(DeQueueInf elem) {
-	    /*在此添加代码*/
-        return 0;
+        return pop(null, elem);
     }
 
     //判用队列是否为空，如果是空则返回1，如果不是空则返回0。
     public static int isEmptyQueue() {
-	    /*在此添加代码*/
-        return 0;
+        return isEmpty(null);
+    }
+
+    public static void printQueue() {
+        System.out.println(IN);
+        System.out.println(OUT);
     }
 }

@@ -7,6 +7,25 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class DemoTest {
+
+	@Test
+	public void testNumber() {
+
+		System.out.println("123 is number: " + Demo.isNumber("123"));
+		System.out.println("000 is number: " + Demo.isNumber("000"));
+		System.out.println("00.00 is number: " + Demo.isNumber("00.00"));
+		System.out.println(".00 is number: " + Demo.isNumber(".00"));
+		System.out.println("00. is number: " + Demo.isNumber("00."));
+		System.out.println("+.00 is number: " + Demo.isNumber("+.00"));
+		System.out.println("-.00 is number: " + Demo.isNumber("-.00"));
+		System.out.println("+123.45 is number: " + Demo.isNumber("+123.45"));
+
+
+		System.out.println("+123.45 is number: " + Demo.isNumber(" +123.45"));
+		System.out.println("+123.45 is number: " + Demo.isNumber(" +123.45 "));
+		System.out.println("+123.45 is number: " + Demo.isNumber("+123.45 "));
+	}
+
 	//ÓÃÀı1:
 	@Test
 	public void testCase01() {

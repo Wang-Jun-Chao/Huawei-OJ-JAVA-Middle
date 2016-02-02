@@ -1,18 +1,24 @@
 import java.util.Scanner;
 
+/**
+ * Author: 王俊超
+ * Date: 2016-02-02 07:58
+ * CSDN: http://blog.csdn.net/derrantcm
+ * Github: https://github.com/Wang-Jun-Chao
+ * Declaration: All Rights Reserved !!!
+ */
 public class Main {
     private static int[] ip = new int[4];
     private static int[] mask = new int[4];
-    private static int ipA;
-    private static int ipB;
-    private static int ipC;
-    private static int ipD;
-    private static int ipE;
-    private static int ipErr;
-    private static int ipP;
+    private static int ipA = 0;
+    private static int ipB = 0;
+    private static int ipC = 0;
+    private static int ipD = 0;
+    private static int ipE = 0;
+    private static int ipErr = 0;
+    private static int ipP = 0;
 
-
-    private static boolean checkIp(String ipStr, String maskStr) {
+    private static void checkIp(String ipStr, String maskStr) {
         String tmp;
         int maskInt = 0;
 
@@ -55,12 +61,11 @@ public class Main {
         for (int i = 0; i < 4; i++) {
             if (ip[i] < 0 || ip[i] > 255 || mask[i] < 0 || mask[i] > 255) {
                 ipErr++;
-                return false;
+                return;
             }
 
             maskInt = (maskInt << 8) + mask[i];
         }
-
 
 
         maskInt = (~maskInt) + 1;
@@ -75,13 +80,13 @@ public class Main {
         }
 
         if (flag == 0) {
-            ipErr--;
-            return false;
+            ipErr++;
+            return;
         }
 
         // A类地址
         if (ip[0] >= 1 && ip[0] <= 126) {
-            ipA ++;
+            ipA++;
             // 私有IP
             if (ip[0] == 10) {
                 ipP++;
@@ -110,18 +115,20 @@ public class Main {
         else {
             ipE++;
         }
-
-        return true;
     }
 
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(Main.class.getClassLoader().getResourceAsStream("data.txt"));
+        // data2.txt 7 19 9 9 4 11 0答案输出
+        // data2.txt 1 0 1 0 0 2 1
+//        Scanner scanner = new Scanner(Main.class.getClassLoader().getResourceAsStream("data2.txt"));
+        Scanner scanner = new Scanner(System.in);
+
         while (scanner.hasNext()) {
             String input = scanner.next();
             int pos = input.indexOf('~');
             String ipStr = input.substring(0, pos);
-            String maskStr = input.substring(pos +1);
+            String maskStr = input.substring(pos + 1);
             checkIp(ipStr, maskStr);
         }
 

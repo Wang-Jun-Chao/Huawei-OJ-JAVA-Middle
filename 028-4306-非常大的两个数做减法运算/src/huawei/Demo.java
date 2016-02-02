@@ -48,10 +48,9 @@ public final class Demo {
         subtrahend = format(subtrahend);
 
         // 记录有多少位小数
-        int mDecimal = minuend.charAt('.');
-        int sDecimal = subtrahend.charAt('.');
-        // 记录结果的小数位数
-        int decimal = mDecimal > sDecimal ? mDecimal : sDecimal;
+        int mDecimal = minuend.indexOf('.');
+        int sDecimal = subtrahend.indexOf('.');
+
 
         if (mDecimal == -1) {
             mDecimal = 0;
@@ -75,29 +74,151 @@ public final class Demo {
             minuend = appendZero(minuend, sDecimal - mDecimal);
         }
 
+        // 记录结果的小数位数
+        int decimal = mDecimal > sDecimal ? mDecimal : sDecimal;
 
         List<Integer> m = strToArr(minuend);
         List<Integer> s = strToArr(subtrahend);
 
 
+
         // 被减数是否大于等于s
         boolean isMgeS = mcompares(m, s);
 
-        List<Integer> rst;
-        // 如果被减数大于等与减数
-        if (isMgeS) {
+//        System.out.println("m: " + m);
+//        System.out.println("s: " + s);
+//        System.out.println("isMgeS: " + isMgeS);
+
+
+        List<Integer> rst = new ArrayList<Integer>();
+        boolean isResultPositive = true;
+
+        // 判断结果是正还是负数
+        // 两个数都是正数，并且第一个数不小于第二个数
+        if (mPositive && sPositive && isMgeS) {
+            isResultPositive = true;
             rst = minus(m, s);
         }
-        // 被减数小于减数
-        else {
+        // 两个数都是正数，并且第一个数小于第二个数
+        else if (mPositive && sPositive && !isMgeS) {
+            isResultPositive = false;
+            rst = minus(s, m);
+        }
+        // 第一个数是正数，第二个数是负数
+        else if (mPositive && !sPositive) {
+            isResultPositive = true;
+            rst = add(m, s);
+        }
+        // 第一个数是负数，第二个数是正数
+        else if (!mPositive && sPositive) {
+            isResultPositive = false;
+            rst = add(m, s);
+        }
+        // 两个数都是非正数，并且第一个数大于第二个数
+        else if (!mPositive && !sPositive && isMgeS) {
+            isResultPositive = false;
+            rst = minus(m, s);
+        }
+        // 两个数都是非正数，并且第一个数小于第二个数
+        else if (!mPositive && !sPositive && !isMgeS) {
+            isResultPositive = true;
             rst = minus(s, m);
         }
 
 
+//        System.out.println(rst);
+//        System.out.println(decimal);
+
         StringBuilder builder = new StringBuilder(rst.size() + 2);
 
+        for (int i = rst.size() - 1; i >= decimal ; i--) {
+            builder.append(rst.get(i));
+        }
 
-        return null;
+        if (decimal > 0) {
+            builder.append('.');
+            for (int i = decimal - 1; i >= 0 ; i--) {
+                builder.append(rst.get(i));
+            }
+        }
+
+        // 有小数
+        if (decimal > 0) {
+            int idx = builder.length() - 1;
+
+            // 去掉秘尾部0
+            while (builder.charAt(idx) == '0') {
+                idx--;
+            }
+
+            // 最后一个小数点，去掉小数点
+            if (builder.charAt(idx) == '.') {
+                idx--;
+            }
+
+            builder.setLength(idx + 1);
+        }
+
+        String resultStr = builder.toString();
+
+        // 去掉多余前导零
+        int idx = 0;
+        while (resultStr.charAt(idx) == '0') {
+            idx++;
+        }
+
+        if (resultStr.charAt(idx) == '.') {
+            idx--;
+        }
+
+        resultStr = resultStr.substring(idx);
+
+        if (!isResultPositive) {
+            resultStr = "-" + resultStr;
+        }
+
+        return resultStr;
+
+    }
+
+    /**
+     * 求m+s，m，s有相同位数的小数，并且m，s已经被归整过了
+     *
+     * @param m 加数
+     * @param s 加数
+     * @return 和
+     */
+    private static List<Integer> add(List<Integer> m, List<Integer> s) {
+        if (m.size() < s.size()) {
+            add(s, m);
+        }
+
+        int max = m.size();
+        int min = s.size();
+        int i = 0;
+        int carry = 0;
+
+        List<Integer> rst = new ArrayList<Integer>(max + 1);
+
+        while (i < min) {
+            int sum = s.get(i) + m.get(i) + carry;
+            carry = sum / 10;
+            rst.add(sum % 10);
+            i++;
+        }
+
+        while (i < max) {
+            int sum = m.get(i) + carry;
+            carry = sum / 10;
+            rst.add(sum % 10);
+            i++;
+        }
+
+        if (carry > 0) {
+            rst.add(0);
+        }
+
+        return rst;
 
     }
 
@@ -135,13 +256,14 @@ public final class Demo {
 
         while (i < max) {
             int mBit = m.get(i) - borrow;
-            if (mBit >= 0 ) {
+            if (mBit >= 0) {
                 rst.add(mBit);
                 borrow = 0;
             } else {
                 rst.add(10 + mBit);
                 borrow = 1;
             }
+            i++;
         }
 
         return rst;
@@ -161,8 +283,10 @@ public final class Demo {
         } else if (m.size() < s.size()) {
             return false;
         } else {
-            for (int i = 0; i < m.size(); i++) {
-                if (m.get(i) != s.get(i)) {
+            for (int i = m.size() - 1; i >= 0; i--) {
+                if (m.get(i) > s.get(i)) {
+                    return true;
+                } else if (m.get(i) < s.get(i)) {
                     return false;
                 }
             }

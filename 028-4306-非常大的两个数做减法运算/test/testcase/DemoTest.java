@@ -32,6 +32,7 @@ public class DemoTest {
 		String minuend = "85";
 		String subtrahend = "79";
 		String result = Demo.decrease(minuend, subtrahend);
+		System.out.println(result);
 		Assert.assertEquals(result, "6");
 
 	}
@@ -42,6 +43,7 @@ public class DemoTest {
 		String minuend = "8.5";
 		String subtrahend = "0.91";
 		String result = Demo.decrease(minuend, subtrahend);
+        System.out.println(result);
 		Assert.assertEquals(result, "7.59");
 
 	}
@@ -52,6 +54,7 @@ public class DemoTest {
 		String minuend = "8.5";
 		String subtrahend = "7.5";
 		String result = Demo.decrease(minuend, subtrahend);
+        System.out.println(result);
 		Assert.assertEquals(result, "1");
 
 	}
@@ -63,9 +66,92 @@ public class DemoTest {
 		String subtrahend = "17.24";
 
 		String result = Demo.decrease(minuend, subtrahend);
+        System.out.println(result);
 		Assert.assertEquals(result, "-4.9");
 
 	}
 
-	
+    // 用例5:
+    @Test
+    public void testCase05() {
+        String minuend = "12.34000";
+        String subtrahend = "17.2400000";
+
+        String result = Demo.decrease(minuend, subtrahend);
+        System.out.println(result);
+        Assert.assertEquals(result, "-4.9");
+
+    }
+
+
+    // 用例6:
+    @Test
+    public void testCase06() {
+        String minuend = "12.0000";
+        String subtrahend = "17.0000";
+
+        String result = Demo.decrease(minuend, subtrahend);
+        System.out.println(result);
+        Assert.assertEquals(result, "-5");
+
+    }
+
+    // 用例7:
+    @Test
+    public void testCase07() {
+        String minuend = "-12.0000";
+        String subtrahend = "17.0000";
+
+        String result = Demo.decrease(minuend, subtrahend);
+        System.out.println(result);
+        Assert.assertEquals(result, "-29");
+
+    }
+
+    // 用例8:
+    @Test
+    public void testCase08() {
+        String minuend = "-12.0000";
+        String subtrahend = "-17.0000";
+
+        String result = Demo.decrease(minuend, subtrahend);
+        System.out.println(result);
+        Assert.assertEquals(result, "5");
+
+    }
+
+    // 用例9:
+    @Test
+    public void testCase09() {
+        String minuend = "12.0000";
+        String subtrahend = "-17.0000";
+
+        String result = Demo.decrease(minuend, subtrahend);
+        System.out.println(result);
+        Assert.assertEquals(result, "29");
+
+    }
+
+
+    // 用例10:
+    @Test
+    public void testCase10() {
+        String minuend = "012.0000";
+        String subtrahend = "-017.0000";
+
+        String result = Demo.decrease(minuend, subtrahend);
+        System.out.println(result);
+        Assert.assertEquals(result, "29");
+    }
+
+    // 用例11:
+    @Test
+    public void testCase11() {
+        String minuend = "00012.0000";
+        String subtrahend = "-000017.0000";
+
+        String result = Demo.decrease(minuend, subtrahend);
+        System.out.println(result);
+        Assert.assertEquals(result, "29");
+    }
 }

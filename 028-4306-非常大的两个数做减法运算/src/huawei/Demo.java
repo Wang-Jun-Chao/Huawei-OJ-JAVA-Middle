@@ -63,6 +63,8 @@ public final class Demo {
         } else {
             sDecimal = subtrahend.length() - (sDecimal + 1);
         }
+
+
         // 被减数的小数位多
         if (mDecimal > sDecimal) {
             // 在减数后面添加零
@@ -190,7 +192,8 @@ public final class Demo {
      */
     private static List<Integer> add(List<Integer> m, List<Integer> s) {
         if (m.size() < s.size()) {
-            add(s, m);
+             return add(s, m);
+
         }
 
         int max = m.size();
@@ -215,7 +218,7 @@ public final class Demo {
         }
 
         if (carry > 0) {
-            rst.add(0);
+            rst.add(carry);
         }
 
         return rst;

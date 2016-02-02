@@ -154,4 +154,15 @@ public class DemoTest {
         System.out.println(result);
         Assert.assertEquals(result, "29");
     }
+
+    // ÓÃÀı12:
+    @Test
+    public void testCase12() {
+        String minuend = "1";
+        String subtrahend = "-9999";
+
+        String result = Demo.decrease(minuend, subtrahend);
+        System.out.println(result);
+        Assert.assertEquals(result, "10000");
+    }
 }

@@ -15,7 +15,7 @@ public final class Demo {
 
         // 判断是不是合法的数字
         if (!isNumber(minuend) || !isNumber(subtrahend)) {
-            throw new IllegalArgumentException("请输入正确的参数");
+            return null;
         }
 
         // 去掉两端空格

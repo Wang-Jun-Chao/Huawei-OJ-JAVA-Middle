@@ -19,7 +19,7 @@ public final class Demo {
             return null;
         }
 
-// 去掉两端空格
+        // 去掉两端空格
         ma = ma.trim();
         mb = mb.trim();
 
@@ -72,6 +72,8 @@ public final class Demo {
         List<Integer> brr = strToArr(mb);
 
         List<Integer> rst = multiply(arr, brr);
+
+        //System.out.println(rst);
 
         StringBuilder builder = new StringBuilder(rst.size());
 
@@ -135,7 +137,7 @@ public final class Demo {
 
     private static List<Integer> multiply(List<Integer> arr, List<Integer> brr) {
 
-        int num = arr.size() + brr.size();
+        int num = arr.size() + brr.size() + 1;
         List<Integer> rst = new ArrayList<Integer>(num);
         for (int i = 0; i < num; i++) {
             rst.add(0);
@@ -159,11 +161,13 @@ public final class Demo {
                 carry = sum / 10;
                 rst.set(i + j, sum % 10);
             }
-            int pos = brr.size();
+
+            int pos = brr.size() + i;
             while (carry > 0) {
                 sum = carry + rst.get(pos);
                 carry = sum / 10;
                 rst.set(pos, sum % 10);
+                pos++;
             }
         }
 
@@ -181,7 +185,7 @@ public final class Demo {
         if (n == null) {
             return false;
         }
-        n = n.trim();
+         n = n.trim();
 
         return n.matches("([+-]?)(\\d+)((.?)(\\d*))?") || n.matches("([+-]?)((\\d*)(.?))?(\\d+)");
     }
@@ -195,6 +199,11 @@ public final class Demo {
     public static String format(String s) {
 
         if (s != null) {
+            // 如果是以小数点打头的
+            if (s.charAt(0) == '.') {
+                s = "0" + s;
+            }
+
             // 去掉前导0
             int pos = 0;
             while (pos < s.length() && s.charAt(pos) == '0') {
